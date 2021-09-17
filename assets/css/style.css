@@ -351,6 +351,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 #hero .btn-get-started {
   font-family: "Roboto", sans-serif;
+  background-color: #f0f8f4;
   font-weight: 500;
   font-size: 2vh;
   letter-spacing: 1px;
@@ -360,7 +361,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   transition: 0.5s;
   line-height: 1;
   margin: 10px;
-  color: #fff;
+  color: rgb(0, 125, 254);
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   border: 2px solid #68A4C4;
