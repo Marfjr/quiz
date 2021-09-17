@@ -1,6 +1,4 @@
-Thanks for downloading this template!
+Quiz Unicesumar
 
-Template Name: Moderna
-Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Para visualizar o andamento do projeto, basta abrir o arquivo "index.html" em seu navedor.
+Favor considerar somente parte inicial da página, o restante será removido ao decorrer do projeto.
