@@ -1440,6 +1440,7 @@ section {
   }
 }
 
+
 /*--------------------------------------------------------------
 # Map
 --------------------------------------------------------------*/
@@ -2021,4 +2022,45 @@ section {
 #footer .credits a {
   color: #a2cce3;
 }
+}
+
+
+
+
+ .section-title-pers {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.section-title-pers h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 8px 20px;
+  margin: 0;
+  background: #e7f1fd;
+  color: #106eea;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
+.section-title-pers h3 {
+  margin: 15px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+.section-title-pers h3 span {
+  color: #ff1e00;
+}
+.section-title-pers p {
+  margin: 15px auto 0 auto;
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .section-title-pers p {
+    width: 50%;
+  }
+} 
+
+#mensagens-erro {
+	color: rgb(235, 252, 7);
 }

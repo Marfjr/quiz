@@ -6,7 +6,14 @@
 (function () {
   "use strict";
 
+
+
+
+
+
   let forms = document.querySelectorAll('.php-email-form');
+
+
 
   forms.forEach( function(e) {
     e.addEventListener('submit', function(event) {
@@ -44,21 +51,37 @@
           displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
         }
       } else {
-        php_email_form_submit(thisForm, action, formData);
+         php_email_form_submit(thisForm, action, formData);
+        formsData(form)
       }
     });
   });
+
+
+  function formsData(form) {
+
+    var usuario = {
+        nome:form.nome.value,
+        email:form.email.value,
+        telefone: form.telefone.value
+    }
+    console.log(usuario)
+    return usuario;
+}
 
   function php_email_form_submit(thisForm, action, formData) {
     fetch(action, {
       method: 'POST',
       body: formData,
-      headers: {'X-Requested-With': 'XMLHttpRequest'}
+     headers: {'X-Requested-With': 'XMLHttpRequest'}
+    
     })
     .then(response => {
       if( response.ok ) {
         return response.text()
+        
       } else {
+        // throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }
     })
