@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
   position: relative;
 }
@@ -409,6 +409,9 @@ h1, h2, h3, h4, h5, h6, .font-primary {
     width: 80%;
    
   }
+  #box2 {
+    display: none;
+}
   #hero::after {
     left: 40%;
     top: 0;
@@ -2059,11 +2062,13 @@ section {
   font-weight: 600;
   margin-top: 100px !important;
 }
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .section-title-pers p {
     width: 50%;
+
   }
 } 
+ 
 
 
 #mensagens-erro {
@@ -2081,4 +2086,13 @@ section {
 
 .za{
   margin-top: -30px;
+}
+
+.tam{
+  width: 30px;
+}
+
+.hy{
+ height: 80px;
+ width: 80px;
 }
