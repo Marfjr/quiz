@@ -407,6 +407,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   }
   #hero img{
     width: 80%;
+   
   }
   #hero::after {
     left: 40%;
@@ -535,13 +536,15 @@ section {
 }
 .section-title .btn{
   width: 60vh; 
-  margin: 0 auto; 
-  display: flex;
-  justify-content: center;
+  margin: 0 auto !important; 
+  display: flex !important;
+  justify-content: center !important;
+ 
 }
 @media (max-width: 575px) {
   .section-title .btn {
     width: 30vh;
+    
   }
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -2054,6 +2057,7 @@ section {
 .section-title-pers p {
   margin: 15px auto 0 auto;
   font-weight: 600;
+  margin-top: 100px !important;
 }
 @media (min-width: 1024px) {
   .section-title-pers p {
@@ -2061,6 +2065,20 @@ section {
   }
 } 
 
+
 #mensagens-erro {
-	color: rgb(235, 252, 7);
+	color: rgb(255, 255, 255);
+
+}
+
+
+
+
+.mar{
+  margin-top: -60px;
+}
+
+
+.za{
+  margin-top: -30px;
 }

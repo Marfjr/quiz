@@ -13,8 +13,7 @@ submit.addEventListener("click", function(event) {
         return;
     }
    
- 
-    // adicionaPacienteNaTabela(paciente);
+
     console.log(usuario);
 
     form.reset();
@@ -34,35 +33,16 @@ function formData(form) {
     return usuario;
 }
 
-// function montaTr(paciente) {
-//     var pacienteTr = document.createElement("tr");
-//     pacienteTr.classList.add("paciente");
-
-//     pacienteTr.appendChild(montaTd(paciente.nome, "info-nome"));
-//     pacienteTr.appendChild(montaTd(paciente.peso, "info-peso"));
-//     pacienteTr.appendChild(montaTd(paciente.altura, "info-altura"));
-//     pacienteTr.appendChild(montaTd(paciente.gordura, "info-gordura"));
-//     pacienteTr.appendChild(montaTd(paciente.imc, "info-imc"));
-
-//     return pacienteTr;
-// }
-
-// function montaTd(dado, classe) {
-//     var td = document.createElement("td");
-//     td.classList.add(classe);
-//     td.textContent = dado;
-
-//     return td;
-// }
 
 function validaUsuario(usuario) {
 
     var erros = [];
 
-    if (usuario.nome.length == 0) {
-        erros.push("O nome não pode ser em branco");
+    if (usuario.nome.length == 0 | usuario.email.length == 0 | usuario.telefone.length == 0) {
+        erros.push("Por favor, preencha todos os campos corretamente");
+        return erros;
     }
-
+/*
     if (usuario.email.length == 0) {
         erros.push("O email não pode ser em branco");
     }
@@ -71,9 +51,12 @@ function validaUsuario(usuario) {
         erros.push("O telefone não pode ser em branco");
     }
 
-   
+   */
 
-    return erros;
+    
+    else {
+        location.href = 'index-3.html'; 
+    }
 }
 
 function exibeMensagensDeErro(erros) {
@@ -87,14 +70,7 @@ function exibeMensagensDeErro(erros) {
     });
 }
 
-// function adicionaPacienteNaTabela(paciente) {
-//     var pacienteTr = montaTr(paciente);
-//     var tabela = document.querySelector("#tabela-pacientes");
-//     tabela.appendChild(pacienteTr);
-// }
-
-
-
+/*
 function validacaoEmail(field) {
     usuario = field.value.substring(0, field.value.indexOf("@"));
     dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
@@ -108,13 +84,13 @@ function validacaoEmail(field) {
         (dominio.search(".")!=-1) &&
         (dominio.indexOf(".") >=1)&&
         (dominio.lastIndexOf(".") < dominio.length - 1)) {
-    // document.getElementById("msgemail").innerHTML="E-mail válido";
-    // console.log("E-mail valido");
+   
     console.log('nada')
     }
     else{
-    document.getElementById("msgemail").innerHTML="<font color='yellow'>Formato de email inválido </font>";
+    document.getElementById("msgemail").innerHTML="<font color='write'>Formato de email inválido </font>";
     console.log("Formato de email inválido");
     return erros
     }
     }
+    */
