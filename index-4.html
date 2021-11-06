@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -28,10 +28,16 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-
+  <!-- =======================================================
+  * Template Name: Moderna - v4.4.0
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
+  
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
@@ -39,74 +45,68 @@
 
       <div class="logo">
         <h1 class="text-light"><a href="index.html"><span><img src="assets/img/logo.png"></span></a></h1>
-      
+    
       </div>
 
     </div>
   </header><!-- End Header -->
 
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
 
-
- <!-- ======= Hero Section ======= -->
- <section id="hero" class="d-flex justify-cntent-center align-items-center">
-  <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
-
-    <!-- Slide 1 -->
-    <div class="carousel-item active">
-      <div class="carousel-container">
-    
-      </div>
-      <section id="services" class="services">
-        <div class="container" data-aos="fade-up">
-
-          <div class="section-title">
-            <div class="section-title-pers">
-              <p>Informe seus dados para receber o resultado</p>
-              <ul id="mensagens-erro"></ul>
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <p class="animate__animated animate__fadeInUp">Tire uma foto para adicionar ao seu avatar</p>
+ 
+          <h2 class="animate__animated animate__fadeInDown"><span><div class="card" style="width: 18rem;">
+            <video autoplay></video>
+            <canvas></canvas> <div class="card-body">
+              <button class="btn-get-started animate__animated animate__fadeInUp"  >Tirar foto</button>
             </div>
-         
-            <ul id="msgemail"></ul>
-           
-            <form id="form" method="post" role="form" class="php-email-form mar">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Nome</label>
-                <input type="text" class="form-control" name="nome" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email</label>
-                <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlInput1">Telefone</label>
-                <input type="tel" class="form-control" name="telefone" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-              </div>
-            <br><br>
-           
-  
-          
-              <button type="submit" id="submit" class="btn btn-get-started animate__animated animate__fadeInUp" onblur="validacaoEmail(form.email)" >Continuar</button>
-
-              <script src="form/form.js"></script> 
-            </form>
             
+            
+            
+            <script>
+              var video = document.querySelector('video');
+
+navigator.mediaDevices.getUserMedia({video:true})
+.then(stream => {
+    video.srcObject = stream;
+    video.play();
+})
+.catch(error => {
+    console.log(error);
+})
+
+document.querySelector('button').addEventListener('click', () => {
+    var canvas = document.querySelector('canvas');
+    canvas.height = video.videoHeight;
+    canvas.width = video.videoWidth;
+    var context = canvas.getContext('2d');
+    context.drawImage(video, 0, 0);
+    var link = document.createElement('a');
+    link.download = 'foto.png';
+    link.href = canvas.toDataURL();
+    link.textContent = 'Clique para baixar a imagem';
+    document.body.appendChild(link);
+});
+            </script>
+         
            
-          </div>
-      
-      
+          </div></span></h2>
+         
         </div>
-      </section>
-      
+      </div>
+
+    
+
+     
+
     </div>
+  </section><!-- End Hero -->
 
-   
-
-  </div>
-</section><!-- End Hero -->
-
-
-
-
-  
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
