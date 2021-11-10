@@ -14,7 +14,9 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -37,7 +39,7 @@
 </head>
 
 <body>
-  
+
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
@@ -45,64 +47,79 @@
 
       <div class="logo">
         <h1 class="text-light"><a href="index.html"><span><img src="assets/img/logo.png"></span></a></h1>
-    
+
       </div>
 
     </div>
   </header><!-- End Header -->
+  <style type="text/css">
+    a { color: red !important;
+      margin-left: 50% !important;
+      margin-top: 50% !important;
+   }
+  </style>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-cntent-center align-items-center">
     <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
 
-      <!-- Slide 1 -->
+      <!-- Slide 1
+      
+      -->
+     
+      <p class="animate__animated animate__fadeInUp">Tire uma foto para adicionar ao seu avatar</p>
       <div class="carousel-item active">
+        
         <div class="carousel-container">
-          <p class="animate__animated animate__fadeInUp">Tire uma foto para adicionar ao seu avatar</p>
- 
-          <h2 class="animate__animated animate__fadeInDown"><span><div class="card" style="width: 18rem;">
-            <video autoplay></video>
-            <canvas></canvas> <div class="card-body">
-              <button class="btn-get-started animate__animated animate__fadeInUp"  >Tirar foto</button>
-            </div>
-            
-            
-            
-            <script>
-              var video = document.querySelector('video');
+        
 
-navigator.mediaDevices.getUserMedia({video:true})
-.then(stream => {
-    video.srcObject = stream;
-    video.play();
-})
-.catch(error => {
-    console.log(error);
-})
+          <h2 class="animate__animated animate__fadeInDown"><span>
+            
+              <div class="card" style="width: 18rem;">
+                
+                <video autoplay></video>
+                <canvas></canvas>
+                <div class="card-body">
+                  <button class="btn-get-started animate__animated animate__fadeInUp">Tirar foto</button>
+                </div>
 
-document.querySelector('button').addEventListener('click', () => {
-    var canvas = document.querySelector('canvas');
-    canvas.height = video.videoHeight;
-    canvas.width = video.videoWidth;
-    var context = canvas.getContext('2d');
-    context.drawImage(video, 0, 0);
-    var link = document.createElement('a');
-    link.download = 'foto.png';
-    link.href = canvas.toDataURL();
-    link.textContent = 'Clique para baixar a imagem';
-    document.body.appendChild(link);
-});
-            </script>
-         
-           
-          </div></span></h2>
-         
+              
+                <script>
+                  var video = document.querySelector('video');
+
+                  navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(stream => {
+                      video.srcObject = stream;
+                      video.play();
+                    })
+                    .catch(error => {
+                      console.log(error);
+                    })
+                    
+                  document.querySelector('button').addEventListener('click', () => {
+                    var canvas = document.querySelector('canvas');
+                    canvas.height = video.videoHeight;
+                    canvas.width = video.videoWidth;
+                    var context = canvas.getContext('2d');
+                    context.drawImage(video, 0,0);
+                    var link = document.createElement('a');
+                    link.download = 'foto.png';
+                    link.href = canvas.toDataURL();
+                    link.textContent = "Usar esta foto";
+                    document.body.appendChild(link);
+                  });
+                </script>
+
+
+              </div>
+            </span></h2>
+
         </div>
       </div>
 
+
     
 
-     
 
     </div>
   </section><!-- End Hero -->
