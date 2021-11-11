@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #68A4C4;
+  background-color: #3077b7 !important;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #85b6cf;
+   background-color: #3077b7 !important;
   color: #fff;
 }
 .back-to-top.active {
@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   background: none;
 }
 #header.header-scrolled {
-  background: rgba(30, 67, 86, 0.8);
+  background: #3077b7;
   height: 60px;
 }
 #header .logo h1 {
@@ -2105,4 +2105,39 @@ section {
 }
 .teste{
   background-color: rgb(199, 5, 5) !important;
+}
+.fgh{
+  /*background-color: #3077b7 !important;*/
+  width: 100vw;
+height: 100vh;
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.gfd{
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.po{
+  color: rgb(32, 31, 31)!important;
+  font-size: 15px !important;
+}
+.poi{
+  color: rgb(3, 3, 3)!important;
+  font-size: 20px !important;
+}
+.jh{
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
